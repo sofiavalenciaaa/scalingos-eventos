@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>scalingOS · Dónde dar la charla</title>
+<meta name="description" content="Conferencias de crecimiento, tech, mindset y propósito para la charla scalingOS Business Calibration de Guillermo Jaramillo. USA, México, España y LATAM, nov-2026 a dic-2027.">
+<meta name="theme-color" content="#050505">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#050505;--ink:#f4f2f7;--body:#b9b1c6;--muted:#7d7589;
+  --pink:#f82d78;--violet:#9818e8;--vdeep:#6a14b8;--soft:#f82d7829;
+  --line:#ffffff14;--line2:#ffffff22;--card:#0c0a10;
+  --grad:linear-gradient(100deg,var(--pink),var(--violet));
+  --mono:"JetBrains Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--night);color:var(--ink);font-family:Jost,system-ui,sans-serif;font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:2px solid var(--pink);outline-offset:3px;border-radius:8px}
+
+/* ---------- grid de fondo ---------- */
+.gridbg{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:56px 56px;mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 30%,transparent 80%)}
+
+/* ---------- nav ---------- */
+nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:#050505b8;border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-size:24px;letter-spacing:.01em;text-decoration:none}
+.logo .s{font-weight:300}.logo .os{font-weight:600;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.status{font-family:var(--mono);font-size:12px;color:var(--body);display:flex;align-items:center;gap:8px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--pink);box-shadow:0 0 0 0 var(--pink);animation:ping 2s infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 #f82d7899}70%{box-shadow:0 0 0 10px #f82d7800}100%{box-shadow:0 0 0 0 #f82d7800}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden;border-bottom:1px solid var(--line)}
+#beams{position:absolute;inset:0;width:100%;height:100%;filter:blur(5px);opacity:.9}
+.scan{position:absolute;inset:0;pointer-events:none;opacity:.18;
+  background-image:linear-gradient(#0000 50%,#000 50%),linear-gradient(90deg,#f82d7810,#9818e808,#6a14b810);background-size:100% 4px,3px 100%}
+.vignette{position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,#050505 0%,#050505cc 35%,transparent 75%),linear-gradient(0deg,#050505 0%,transparent 25%)}
+.hero .wrap{width:100%;position:relative;z-index:2;padding-top:40px;padding-bottom:60px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12.5px;color:var(--ink);
+  border:1px solid var(--line2);background:#ffffff08;padding:7px 14px;border-radius:999px}
+.eyebrow b{color:var(--pink);font-weight:500}
+h1{font-size:clamp(40px,7.4vw,96px);line-height:.98;font-weight:600;letter-spacing:-.035em;margin:22px 0 18px;max-width:14ch}
+h1 .shine{background:linear-gradient(100deg,var(--pink) 0%,var(--violet) 40%,#fff 50%,var(--violet) 60%,var(--pink) 100%);background-size:250% 100%;
+  -webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite}
+@keyframes shine{from{background-position:100% 0}to{background-position:-150% 0}}
+.lead{font-size:clamp(17px,2vw,21px);color:var(--body);max-width:620px;font-weight:300;line-height:1.5;margin:0}
+.lead strong{color:var(--ink);font-weight:500}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;margin-top:44px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden;max-width:880px}
+.kpi{background:#050505d9;padding:20px 22px;backdrop-filter:blur(6px)}
+.kpi .n{font-size:clamp(32px,4vw,46px);font-weight:600;letter-spacing:-.03em;font-variant-numeric:tabular-nums;line-height:1}
+.kpi.hot .n{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.kpi .l{font-family:var(--mono);font-size:11.5px;color:var(--body);margin-top:8px;text-transform:uppercase;letter-spacing:.06em}
+.cta{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}
+.btn{font:500 15px Jost,sans-serif;text-decoration:none;padding:13px 22px;border-radius:999px;border:1px solid var(--line2);color:var(--ink);background:#ffffff08;cursor:pointer;transition:transform .2s,border-color .2s}
+.btn:hover{transform:translateY(-2px);border-color:#ffffff55}
+.btn.primary{background:var(--grad);border-color:transparent;box-shadow:0 10px 40px -10px var(--pink)}
+
+/* ---------- secciones ---------- */
+section{padding:90px 0}
+.sh{display:flex;align-items:end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:32px}
+.tag{font-family:var(--mono);font-size:12px;color:var(--pink);text-transform:uppercase;letter-spacing:.12em}
+h2{font-size:clamp(30px,4.4vw,52px);font-weight:600;letter-spacing:-.03em;line-height:1.02;margin:10px 0 0}
+.sub{color:var(--body);font-weight:300;max-width:520px;margin:0;font-size:17px}
+
+/* ---------- tarjetas spotlight ---------- */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:16px}
+.card{--x:50%;--y:50%;position:relative;border-radius:20px;padding:1px;background:var(--line2);overflow:hidden;isolation:isolate;
+  transition:transform .35s cubic-bezier(.22,1,.36,1)}
+.card::before{content:"";position:absolute;inset:0;z-index:-1;opacity:0;transition:opacity .3s;
+  background:radial-gradient(420px circle at var(--x) var(--y),var(--pink),var(--violet) 30%,transparent 60%)}
+.card:hover::before,.card:focus-within::before{opacity:1}
+.card:hover{transform:translateY(-4px)}
+.ci{position:relative;height:100%;border-radius:19px;background:var(--card);padding:22px;display:flex;flex-direction:column;gap:14px}
+.ci::after{content:"";position:absolute;inset:0;border-radius:19px;pointer-events:none;opacity:0;transition:opacity .3s;
+  background:radial-gradient(300px circle at var(--x) var(--y),#f82d7818,transparent 70%)}
+.card:hover .ci::after{opacity:1}
+.top{display:flex;justify-content:space-between;align-items:start;gap:12px}
+.where{font-family:var(--mono);font-size:11.5px;color:var(--body);text-transform:uppercase;letter-spacing:.06em}
+.card h3{font-size:21px;font-weight:600;letter-spacing:-.015em;line-height:1.15;margin:6px 0 0}
+.card h3 a{text-decoration:none}.card h3 a:hover{color:var(--pink)}
+.ring{--p:0;flex:0 0 58px;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;position:relative;
+  background:conic-gradient(var(--pink),var(--violet) calc(var(--p)*1%),#ffffff12 0)}
+.ring::before{content:"";position:absolute;inset:4px;border-radius:50%;background:var(--card)}
+.ring span{position:relative;font-weight:600;font-size:18px;font-variant-numeric:tabular-nums}
+.ring.off{background:conic-gradient(#ffffff55 calc(var(--p)*1%),#ffffff12 0)}
+.meta{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;font-size:14px}
+.meta dt{font-family:var(--mono);font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.meta dd{margin:2px 0 0;color:var(--ink)}
+.note{color:var(--body);font-size:14.5px;font-weight:300;line-height:1.45;margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.chip{font-family:var(--mono);font-size:11px;padding:4px 9px;border-radius:999px;border:1px solid var(--line2);color:var(--body)}
+.chip.ok{border-color:#f82d7866;color:#ff9cc0;background:var(--soft)}
+.chip.conf{border-color:#9818e866;color:#d3a2ff;background:#9818e81c}
+.door{display:inline-flex;align-items:center;gap:6px;font-size:14px;text-decoration:none;color:var(--ink);border-top:1px solid var(--line);padding-top:12px;word-break:break-word}
+a.door:hover{color:var(--pink)}
+.door svg{flex:0 0 auto}
+
+/* ---------- filtros ---------- */
+.bar{position:sticky;top:64px;z-index:40;display:flex;gap:10px;flex-wrap:wrap;align-items:center;padding:14px 0;margin-bottom:22px;background:#050505e6;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.seg{display:inline-flex;border:1px solid var(--line2);border-radius:999px;padding:3px;background:#ffffff06}
+.seg button,.pill{font:500 14px Jost,sans-serif;color:var(--body);background:none;border:0;padding:8px 14px;border-radius:999px;cursor:pointer;transition:color .2s,background .2s}
+.seg button[aria-pressed=true]{background:var(--grad);color:#fff}
+.pill{border:1px solid var(--line2)}
+.pill[aria-pressed=true]{color:#fff;border-color:var(--pink);background:var(--soft)}
+.search{flex:1 1 220px;min-width:0;font:400 15px Jost,sans-serif;color:var(--ink);background:#ffffff08;border:1px solid var(--line2);border-radius:999px;padding:10px 16px}
+.search::placeholder{color:var(--muted)}
+.count{font-family:var(--mono);font-size:12px;color:var(--body);margin-left:auto}
+.empty{grid-column:1/-1;text-align:center;color:var(--body);padding:60px 0;border:1px dashed var(--line2);border-radius:20px}
+
+/* ---------- región ---------- */
+.regions{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.reg{border:1px solid var(--line2);border-radius:20px;padding:22px;background:var(--card)}
+.reg .rn{font-size:15px;color:var(--body)}
+.reg .big{font-size:44px;font-weight:600;letter-spacing:-.03em;margin:6px 0 12px}
+.reg .big small{font-size:16px;color:var(--muted);font-weight:400}
+.track{height:6px;border-radius:9px;background:#ffffff10;overflow:hidden}
+.fill{height:100%;width:0;border-radius:9px;background:var(--grad);transition:width 1.4s cubic-bezier(.22,1,.36,1)}
+
+/* ---------- método ---------- */
+.method{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.m{border-top:2px solid var(--line2);padding-top:16px;position:relative}
+.m::before{content:"";position:absolute;top:-2px;left:0;height:2px;width:0;background:var(--grad);transition:width 1.2s cubic-bezier(.22,1,.36,1)}
+.m.in::before{width:100%}
+.m .pts{font-size:40px;font-weight:600;letter-spacing:-.03em}
+.m p{color:var(--body);font-size:14.5px;margin:4px 0 0;font-weight:300}
+footer{border-top:1px solid var(--line);padding:40px 0 60px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:760px){
+  .kpis{grid-template-columns:repeat(2,1fr)}
+  .method{grid-template-columns:1fr 1fr}
+  .cards{grid-template-columns:1fr}
+  section{padding:64px 0}
+  .bar{top:64px}
+  .count{margin-left:0}
+  .status .txt{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div class="gridbg" aria-hidden="true"></div>
+
+<nav><div class="wrap">
+  <a class="logo" href="#top" aria-label="scalingOS"><span class="s">scaling</span><span class="os">OS</span></a>
+  <div class="status"><span class="dot" aria-hidden="true"></span><span class="txt">base actualizada <span id="upd">…</span></span></div>
+</div></nav>
+
+<header class="hero" id="top">
+  <canvas id="beams" aria-hidden="true"></canvas>
+  <div class="scan" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="wrap">
+    <span class="eyebrow"><b>●</b> <span data-scramble>Business Calibration · Guillermo Jaramillo</span></span>
+    <h1><span data-scramble>Dónde dar la charla</span> <span class="shine">2026-2027</span></h1>
+    <p class="lead">Un agente de IA rastrea cada semana conferencias de <strong>crecimiento, tech, mindset y propósito</strong> para founders en USA, México, España y LATAM, y las califica de 0 a 100.</p>
+    <div class="kpis">
+      <div class="kpi"><div class="n" data-count="k-total">0</div><div class="l">eventos revisados</div></div>
+      <div class="kpi hot"><div class="n" data-count="k-ok">0</div><div class="l">cumplen criterios</div></div>
+      <div class="kpi"><div class="n" data-count="k-cfp">0</div><div class="l">con convocatoria</div></div>
+      <div class="kpi"><div class="n" data-count="k-conf">0</div><div class="l">fecha confirmada</div></div>
+    </div>
+    <div class="cta"><a class="btn primary" href="#top6">Ver los mejores</a><a class="btn" href="#todos">Explorar todos</a></div>
+  </div>
+</header>
+
+<main>
+  <section id="top6"><div class="wrap">
+    <div class="sh rv"><div><div class="tag" data-scramble>// prioridad</div><h2>Los 6 primeros a contactar</h2></div>
+      <p class="sub">Mayor puntaje con una puerta de entrada real: convocatoria abierta o contacto directo.</p></div>
+    <div class="cards" id="featured"></div>
+  </div></section>
+
+  <section id="regiones" style="padding-top:0"><div class="wrap">
+    <div class="sh rv"><div><div class="tag" data-scramble>// cobertura</div><h2>Por región</h2></div>
+      <p class="sub">Eventos que cumplen sobre el total revisado en cada zona.</p></div>
+    <div class="regions" id="regions"></div>
+  </div></section>
+
+  <section id="todos" style="padding-top:0"><div class="wrap">
+    <div class="sh rv"><div><div class="tag" data-scramble>// base completa</div><h2>Todos los eventos</h2></div></div>
+    <div class="bar" role="toolbar" aria-label="Filtros">
+      <div class="seg" role="group" aria-label="Mostrar">
+        <button type="button" data-only="1" aria-pressed="true">Cumplen</button>
+        <button type="button" data-only="0" aria-pressed="false">Todos</button>
+      </div>
+      <div id="regpills" role="group" aria-label="Región" style="display:flex;gap:6px;flex-wrap:wrap"></div>
+      <label class="sr-only" for="q">Buscar</label>
+      <input id="q" class="search" type="search" placeholder="Buscar evento o ciudad">
+      <span class="count" id="count" aria-live="polite"></span>
+    </div>
+    <div class="cards" id="all"></div>
+  </div></section>
+
+  <section id="metodo" style="padding-top:0"><div class="wrap">
+    <div class="sh rv"><div><div class="tag" data-scramble>// cómo se califica</div><h2>100 puntos, 5 criterios</h2></div>
+      <p class="sub">Cumple con 70 o más y al menos una forma de contactar al evento. Las fechas "por confirmar" vienen de la edición anterior.</p></div>
+    <div class="method">
+      <div class="m rv"><div class="pts">30</div><p>Público de founders, dueños o CEOs</p></div>
+      <div class="m rv"><div class="pts">20</div><p>Español o comunidad latina</p></div>
+      <div class="m rv"><div class="pts">20</div><p>Convocatoria o contacto para speakers</p></div>
+      <div class="m rv"><div class="pts">15</div><p>Crecimiento, IA para negocio o mindset</p></div>
+      <div class="m rv"><div class="pts">15</div><p>USA, México o España</p></div>
+    </div>
+  </div></section>
+</main>
+
+<footer><div class="wrap">
+  <span><span class="logo" style="font-size:18px"><span class="s">scaling</span><span class="os">OS</span></span> · del crecimiento por esfuerzo al crecimiento por sistemas</span>
+  <span>Fuentes: sitios oficiales y prensa. Verificar fecha antes de contactar.</span>
+</div></footer>
+
+<script>
+(() => {
+const RM = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const $ = (s, r = document) => r.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+/* ===== 1. Holographic Beams (21st.dev · jahed/beams-background, en paleta scalingOS) ===== */
+(function beams(){
+  const c = $("#beams"), ctx = c.getContext("2d"); if (!ctx) return;
+  const density = innerWidth < 700 ? 12 : 22, speed = 1, ab = 4, op = 100;
+  let w, h, t = 0, raf;
+  const noise = (x, t) => (Math.sin(x*.01+t) + Math.sin(x*.03+t*2)*.5 + Math.sin(x*.1+t*4)*.25) / 1.75;
+  const size = () => { const r = c.getBoundingClientRect(); w = c.width = r.width; h = c.height = r.height; };
+  const beam = (x, tt, col, wm) => {
+    const n = noise(x, tt*.5), bh = h*(.7+n*.3), bw = (w/density)*wm;
+    const g = ctx.createLinearGradient(x, h, x, h-bh); g.addColorStop(0, col); g.addColorStop(1, "transparent");
+    ctx.fillStyle = g; ctx.beginPath();
+    ctx.moveTo(x-bw/2, h); ctx.lineTo(x+bw/2, h); ctx.lineTo(x+bw, h-bh); ctx.lineTo(x-bw, h-bh); ctx.fill();
+  };
+  const draw = () => {
+    ctx.clearRect(0, 0, w, h); ctx.globalCompositeOperation = "screen";
+    t += .01*speed; const step = w/density;
+    for (let i = 0; i <= density; i++) {
+      const x = i*step;
+      beam(x-ab, t+i*.1,     `rgba(248,45,120,${(op/100)*(.5+.5*Math.cos(i*.5+t))*.75})`, 1.6);   // pink
+      beam(x+ab, t+i*.12+10, `rgba(152,24,232,${(op/100)*(.5+.5*Math.sin(i*.6+t*1.1))*.75})`, 1.6); // violet
+      beam(x,    t+i*.1+5,   `rgba(255,220,240,${(op/100)*(.6+.4*Math.sin(i*.3-t))*.22})`, .8);    // core
+    }
+    if (!RM) raf = requestAnimationFrame(draw);
+  };
+  addEventListener("resize", size); size(); draw();
+  new IntersectionObserver(([e]) => { if (RM) return; cancelAnimationFrame(raf); if (e.isIntersecting) draw(); }).observe(c);
+})();
+
+/* ===== 2. Scramble Text (21st.dev · dqnamo/scramble-text) ===== */
+const CH = "-_~`!@#$%^&*()+=[]{}|;:,.<>?01";
+function scramble(el, ms = 30) {
+  const txt = el.dataset.text ?? el.textContent; el.dataset.text = txt;
+  el.setAttribute("aria-label", txt);
+  const seg = Array.from(txt); if (RM) { el.textContent = txt; return; }
+  const step = Math.max(1, Math.ceil(seg.length / 40)); let n = 0;
+  const run = () => seg.map((ch, i) => ch.trim() === "" || i < n ? ch : CH[Math.random()*CH.length|0]).join("");
+  el.textContent = run();
+  const id = setInterval(() => { n = Math.min(seg.length, n+step); el.textContent = run(); if (n >= seg.length) clearInterval(id); }, ms);
+}
+
+/* ===== 3. Number Ticker (inspirado en 21st.dev · dillionverma/number-ticker) ===== */
+function tick(el, to, dur = 1600) {
+  if (RM) { el.textContent = to; return; }
+  const t0 = performance.now();
+  const f = now => { const p = Math.min(1, (now-t0)/dur), e = 1 - Math.pow(1-p, 4);
+    el.textContent = Math.round(to*e); if (p < 1) requestAnimationFrame(f); };
+  requestAnimationFrame(f);
+}
+
+/* ===== 4. Spotlight Card (inspirado en 21st.dev · preetsuthar17/spotlight-card) ===== */
+document.addEventListener("pointermove", e => {
+  const card = e.target.closest?.(".card"); if (!card) return;
+  const r = card.getBoundingClientRect();
+  card.style.setProperty("--x", `${e.clientX - r.left}px`); card.style.setProperty("--y", `${e.clientY - r.top}px`);
+});
+
+/* ===== 5. Reveal al hacer scroll ===== */
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return; const el = e.target; el.classList.add("in"); io.unobserve(el);
+  el.querySelectorAll?.("[data-scramble]").forEach(s => scramble(s));
+  if (el.matches("[data-scramble]")) scramble(el);
+  el.querySelectorAll?.(".fill").forEach(f => f.style.width = f.dataset.w);
+  el.querySelectorAll?.(".ring").forEach(ringIn);
+}), { threshold: .15 });
+function ringIn(r) {
+  const to = +r.dataset.p; if (RM) { r.style.setProperty("--p", to); return; }
+  const t0 = performance.now();
+  const f = now => { const p = Math.min(1, (now-t0)/1100), e = 1 - Math.pow(1-p, 3);
+    r.style.setProperty("--p", (to*e).toFixed(1)); r.querySelector("span").textContent = Math.round(to*e); if (p < 1) requestAnimationFrame(f); };
+  requestAnimationFrame(f);
+}
+
+/* ===== datos ===== */
+const REG = p => p === "USA" ? "USA" : p === "México" ? "México" : p === "España" ? "España" : "LATAM";
+const arrow = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>';
+function door(e) {
+  const cfp = String(e.cfp || ""), m = cfp.match(/https?:\/\/\S+/);
+  if (m) return `<a class="door" href="${esc(m[0])}" target="_blank" rel="noopener">${arrow} Convocatoria para speakers</a>`;
+  const c = e.contacto_speakers && e.contacto_speakers !== "s/d" ? e.contacto_speakers : "";
+  const mail = c.match(/[\w.+-]+@[\w-]+\.[\w.]+/);
+  if (mail) return `<a class="door" href="mailto:${esc(mail[0])}">${arrow} ${esc(c)}</a>`;
+  return `<span class="door" style="color:var(--muted)">${c ? esc(c) : "Sin contacto todavía"}</span>`;
+}
+function card(e) {
+  return `<article class="card"><div class="ci">
+    <div class="top"><div><div class="where">${esc(e.ciudad)} · ${esc(e.pais)}</div>
+      <h3><a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.nombre)}</a></h3></div>
+      <div class="ring ${e.cumple ? "" : "off"}" data-p="${e.puntaje}" role="img" aria-label="Puntaje ${e.puntaje} de 100"><span>0</span></div></div>
+    <dl class="meta"><div><dt>Fechas</dt><dd>${esc(e.fechas)}</dd></div><div><dt>Audiencia</dt><dd>${esc(e.audiencia)}</dd></div></dl>
+    <p class="note">${esc(e.nota)}</p>
+    <div class="chips">${e.cumple ? '<span class="chip ok">Cumple</span>' : ""}${e.fecha_confirmada ? '<span class="chip conf">Fecha confirmada</span>' : '<span class="chip">Por confirmar</span>'}<span class="chip">${esc(e.idioma)}</span>${e.asistentes && e.asistentes !== "s/d" ? `<span class="chip">${esc(e.asistentes.split("(")[0].trim())}</span>` : ""}</div>
+    ${door(e)}
+  </div></article>`;
+}
+function observeAll(root) { root.querySelectorAll(".card").forEach((c, i) => { c.classList.add("rv"); c.style.transitionDelay = `${Math.min(i, 8)*60}ms`; io.observe(c); }); }
+
+fetch("eventos.json").then(r => r.json()).then(ev => {
+  ev.sort((a, b) => b.puntaje - a.puntaje);
+  const ok = ev.filter(e => e.cumple);
+  const k = {"k-total": ev.length, "k-ok": ok.length,
+    "k-cfp": ev.filter(e => /https?:\/\//.test(e.cfp || "")).length, "k-conf": ev.filter(e => e.fecha_confirmada).length};
+  document.querySelectorAll("[data-count]").forEach(el => tick(el, k[el.dataset.count]));
+  $("#upd").textContent = document.lastModified ? new Date(document.lastModified).toLocaleDateString("es-CO", {day:"numeric", month:"short"}) : "";
+
+  const feat = ok.filter(e => /https?:|@|\d{3}/.test((e.cfp||"") + (e.contacto_speakers||""))).slice(0, 6);
+  $("#featured").innerHTML = feat.map(card).join(""); observeAll($("#featured"));
+
+  const regs = ["USA", "México", "España", "LATAM"];
+  $("#regions").innerHTML = regs.map(r => { const all = ev.filter(e => REG(e.pais) === r), y = all.filter(e => e.cumple).length;
+    return `<div class="reg rv"><div class="rn">${r}</div><div class="big">${y}<small> / ${all.length}</small></div>
+      <div class="track"><div class="fill" data-w="${all.length ? Math.round(y/all.length*100) : 0}%"></div></div></div>`; }).join("");
+  $("#regions").querySelectorAll(".rv").forEach(x => io.observe(x));
+
+  let only = true, reg = "", q = "";
+  $("#regpills").innerHTML = ["", ...regs].map(r => `<button type="button" class="pill" data-reg="${r}" aria-pressed="${r === ""}">${r || "Todas"}</button>`).join("");
+  const render = () => {
+    const list = ev.filter(e => (!only || e.cumple) && (!reg || REG(e.pais) === reg) &&
+      (!q || (e.nombre + " " + e.ciudad + " " + e.pais).toLowerCase().includes(q)));
+    $("#all").innerHTML = list.length ? list.map(card).join("") : '<div class="empty">Nada con esos filtros. Prueba con "Todos".</div>';
+    $("#count").textContent = `${list.length} de ${ev.length}`;
+    observeAll($("#all"));
+  };
+  document.querySelectorAll("[data-only]").forEach(b => b.onclick = () => { only = b.dataset.only === "1";
+    document.querySelectorAll("[data-only]").forEach(x => x.setAttribute("aria-pressed", x === b)); render(); });
+  $("#regpills").onclick = e => { const b = e.target.closest("[data-reg]"); if (!b) return; reg = b.dataset.reg;
+    $("#regpills").querySelectorAll(".pill").forEach(x => x.setAttribute("aria-pressed", x === b)); render(); };
+  $("#q").oninput = e => { q = e.target.value.trim().toLowerCase(); render(); };
+  render();
+}).catch(() => { $("#all").innerHTML = '<div class="empty">No se pudo cargar la base de eventos.</div>'; });
+
+document.querySelectorAll("header [data-scramble]").forEach((el, i) => setTimeout(() => scramble(el, 28), 200 + i*250));
+document.querySelectorAll("section .rv, .m.rv").forEach(x => io.observe(x));
+})();
+</script>
+</body>
+</html>
